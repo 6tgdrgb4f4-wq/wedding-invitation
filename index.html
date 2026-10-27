@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Абылайхан & Наргиза — үйлену тойы</title>
+  <meta name="description" content="Абылайхан мен Наргизаның үйлену тойына шақыру · 26.12.2026 · 17:30 · Lumiere Hall, Алматы">
+  <meta name="theme-color" content="#7A1F2B">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Абылайхан & Наргиза — үйлену тойы">
+  <meta property="og:description" content="Тойға шақыру · 26 желтоқсан 2026, 17:30 · Lumiere Hall, Алматы">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Reusable ornaments -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Shanyrak: the crown of the yurt -->
+      <symbol id="shanyrak" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="1.6 4.55"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <path d="M15 50 Q50 28 85 50"/>
+          <path d="M15 50 Q50 72 85 50"/>
+          <path d="M50 15 Q28 50 50 85"/>
+          <path d="M50 15 Q72 50 50 85"/>
+        </g>
+      </symbol>
+
+      <!-- Qoshqar muyiz: ram's horn ornament -->
+      <symbol id="koshkar" viewBox="0 0 200 40">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M2 30 H62"/>
+          <path d="M138 30 H198"/>
+          <path d="M100 34 C100 22 108 12 120 12 C131 12 138 20 136 28 C134 35 125 37 121 31 C118 26 122 21 126 23"/>
+          <path d="M100 34 C100 22 92 12 80 12 C69 12 62 20 64 28 C66 35 75 37 79 31 C82 26 78 21 74 23"/>
+        </g>
+        <path d="M100 2 L105 9 L100 16 L95 9 Z" fill="currentColor"/>
+      </symbol>
+
+      <!-- Corner flourish for the hero frame -->
+      <symbol id="corner" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M3 46 V14 Q3 3 14 3 H46"/>
+          <path d="M10 46 V18 Q10 10 18 10 H46"/>
+          <path d="M18 18 C26 18 28 27 22 29 C17 30 16 24 20 23"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Language switch -->
+  <div class="lang-switch" role="group" aria-label="Language / Тіл">
+    <button type="button" data-lang="kk" aria-pressed="true">ҚАЗ</button>
+    <button type="button" data-lang="en" aria-pressed="false">ENG</button>
+  </div>
+
+  <!-- Opening "yurt doors" -->
+  <div class="intro" id="intro">
+    <div class="intro__door intro__door--left"></div>
+    <div class="intro__door intro__door--right"></div>
+    <div class="intro__content">
+      <svg class="intro__shanyrak"><use href="#shanyrak"/></svg>
+      <p class="intro__names"><span data-i18n="groom">Абылайхан</span> &amp; <span data-i18n="bride">Наргиза</span></p>
+      <button type="button" class="btn btn--gold" id="intro-open" data-i18n="openInvite">Шақыртуды ашу</button>
+    </div>
+  </div>
+
+  <main class="page">
+    <!-- Hero -->
+    <section class="hero card reveal">
+      <svg class="corner corner--tl"><use href="#corner"/></svg>
+      <svg class="corner corner--tr"><use href="#corner"/></svg>
+      <svg class="corner corner--bl"><use href="#corner"/></svg>
+      <svg class="corner corner--br"><use href="#corner"/></svg>
+
+      <svg class="hero__shanyrak" aria-hidden="true"><use href="#shanyrak"/></svg>
+      <p class="kicker" data-i18n="heroKicker">Үйлену тойына шақыру</p>
+      <h1 class="names">
+        <span data-i18n="groom">Абылайхан</span>
+        <span class="names__amp">&amp;</span>
+        <span data-i18n="bride">Наргиза</span>
+      </h1>
+      <svg class="divider" aria-hidden="true"><use href="#koshkar"/></svg>
+      <p class="hero__date" data-i18n="heroDate">26 желтоқсан 2026 · 17:30</p>
+    </section>
+
+    <!-- Invitation text -->
+    <section class="invite reveal">
+      <p class="invite__greeting" data-i18n="greeting">Құрметті ағайын-туыс, құда-жекжат, дос-жарандар!</p>
+      <p class="invite__text" data-i18n="inviteText">Сіздерді Абылайхан мен Наргизаның үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown reveal" aria-live="off">
+      <h2 class="section-title" data-i18n="countdownTitle">Тойға дейін</h2>
+      <div class="countdown__grid" id="countdown">
+        <div class="countdown__cell"><span class="countdown__num" id="cd-days">–</span><span class="countdown__label" data-i18n="days">күн</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-hours">–</span><span class="countdown__label" data-i18n="hours">сағат</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-minutes">–</span><span class="countdown__label" data-i18n="minutes">минут</span></div>
+        <div class="countdown__cell"><span class="countdown__num" id="cd-seconds">–</span><span class="countdown__label" data-i18n="seconds">секунд</span></div>
+      </div>
+      <p class="countdown__done" id="countdown-done" data-i18n="started" hidden>Той басталды!</p>
+    </section>
+
+    <svg class="divider divider--section" aria-hidden="true"><use href="#koshkar"/></svg>
+
+    <!-- When & where -->
+    <section class="details card reveal">
+      <h2 class="section-title" data-i18n="whenWhereTitle">Той салтанаты</h2>
+      <dl class="details__list">
+        <div><dt data-i18n="dateLabel">Күні</dt><dd data-i18n="dateValue">26 желтоқсан 2026, сенбі</dd></div>
+        <div><dt data-i18n="timeLabel">Уақыты</dt><dd data-i18n="timeValue">17:30 – 00:00</dd></div>
+        <div><dt data-i18n="placeLabel">Мекенжайы</dt><dd>Lumiere Hall, <span data-i18n="city">Алматы</span></dd></div>
+      </dl>
+      <div class="btn-row">
+        <a class="btn btn--map" id="link-2gis" target="_blank" rel="noopener">
+          <span class="btn__badge btn__badge--2gis">2GIS</span><span data-i18n="open2gis">2GIS-те ашу</span>
+        </a>
+        <a class="btn btn--map" id="link-yandex" target="_blank" rel="noopener">
+          <span class="btn__badge btn__badge--yandex">Я</span><span data-i18n="openYandex">Яндекс Картада ашу</span>
+        </a>
+      </div>
+
+      <h3 class="subtitle" data-i18n="calendarTitle">Күнтізбеге қосу</h3>
+      <div class="btn-row btn-row--split">
+        <a class="btn btn--outline" id="link-gcal" target="_blank" rel="noopener" data-i18n="googleCal">Google Calendar</a>
+        <a class="btn btn--outline" href="wedding.ics" download="wedding.ics" data-i18n="appleCal">Apple / Outlook</a>
+      </div>
+    </section>
+
+    <!-- Hosts -->
+    <section class="hosts reveal">
+      <h2 class="section-title" data-i18n="hostsTitle">Той иелері</h2>
+      <p class="hosts__names" data-i18n="hosts">Серік – Айнур</p>
+    </section>
+
+    <svg class="divider divider--section" aria-hidden="true"><use href="#koshkar"/></svg>
+
+    <!-- RSVP -->
+    <section class="rsvp card reveal" id="rsvp">
+      <h2 class="section-title" data-i18n="rsvpTitle">Тойға келесіз бе?</h2>
+      <p class="rsvp__lead" data-i18n="rsvpLead">Жауабыңызды алдын ала білдіруіңізді сұраймыз</p>
+
+      <form id="rsvp-form" novalidate>
+        <label class="field">
+          <span class="field__label" data-i18n="nameLabel">Аты-жөніңіз</span>
+          <input type="text" id="rsvp-name" name="name" maxlength="100" autocomplete="name" required
+                 data-i18n-placeholder="namePlaceholder" placeholder="Аты-жөніңізді жазыңыз">
+        </label>
+
+        <fieldset class="choice">
+          <legend class="visually-hidden" data-i18n="rsvpTitle">Тойға келесіз бе?</legend>
+          <label class="choice__opt"><input type="radio" name="attending" value="yes"><span data-i18n="yes">Иә, келемін</span></label>
+          <label class="choice__opt"><input type="radio" name="attending" value="no"><span data-i18n="no">Өкінішке орай, келе алмаймын</span></label>
+        </fieldset>
+
+        <div class="rsvp__party" id="party-block" hidden>
+          <fieldset class="choice">
+            <legend class="field__label" data-i18n="partyQuestion">Кіммен келесіз?</legend>
+            <label class="choice__opt"><input type="radio" name="party" value="alone"><span data-i18n="alone">Жалғыз</span></label>
+            <label class="choice__opt"><input type="radio" name="party" value="with"><span data-i18n="withOthers">Серігіммен / отбасыммен</span></label>
+          </fieldset>
+
+          <div class="companions" id="companions-block" hidden>
+            <p class="field__label" data-i18n="companionsLabel">Бірге келетін адамдардың аты-жөні</p>
+            <ol class="companions__list" id="companions-list"></ol>
+            <button type="button" class="btn btn--text" id="add-companion" data-i18n="addCompanion">+ Адам қосу</button>
+          </div>
+        </div>
+
+        <p class="form-error" id="rsvp-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn--primary btn--wide" id="rsvp-submit" data-i18n="submit">Жіберу</button>
+      </form>
+
+      <div class="rsvp__done" id="rsvp-done" hidden>
+        <svg class="rsvp__icon" aria-hidden="true"><use href="#shanyrak"/></svg>
+        <p class="rsvp__message" id="rsvp-done-msg" role="status"></p>
+        <button type="button" class="btn btn--text" id="rsvp-again" data-i18n="sendAgain">Жауапты өзгерту</button>
+      </div>
+
+      <div class="rsvp__done" id="rsvp-closed" hidden>
+        <svg class="rsvp__icon" aria-hidden="true"><use href="#shanyrak"/></svg>
+        <p class="rsvp__message" data-i18n="rsvpClosed">Жауап қабылдау аяқталды. Рахмет!</p>
+      </div>
+    </section>
+
+    <footer class="footer reveal">
+      <svg class="footer__shanyrak" aria-hidden="true"><use href="#shanyrak"/></svg>
+      <p class="footer__text" data-i18n="footer">Сіздерді күтеміз!</p>
+      <p class="footer__names"><span data-i18n="groom">Абылайхан</span> &amp; <span data-i18n="bride">Наргиза</span> · 26.12.2026</p>
+    </footer>
+  </main>
+
+  <template id="companion-template">
+    <li class="companions__item">
+      <input type="text" maxlength="100" autocomplete="off" data-i18n-placeholder="companionPlaceholder">
+      <button type="button" class="companions__remove" data-i18n-aria="remove" aria-label="Өшіру">×</button>
+    </li>
+  </template>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
