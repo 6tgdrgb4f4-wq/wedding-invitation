@@ -6,6 +6,7 @@
   var LANG_KEY = "wedding-lang";
   var RSVP_KEY = "wedding-rsvp";
   var lang = "kk";
+  var music = null;
 
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
@@ -45,6 +46,7 @@
     });
 
     $("#link-gcal").href = googleCalendarUrl();
+    if (music) music.setLang(lang);
   }
 
   function initLang() {
@@ -91,8 +93,72 @@
     $("#intro-open").addEventListener("click", function () {
       intro.classList.add("is-open");
       document.body.classList.remove("is-locked");
+      // Browsers only allow audio after a tap, so the "open" tap starts the music.
+      if (music) music.start();
       setTimeout(function () { intro.classList.add("is-gone"); }, reduced ? 0 : 1200);
     });
+  }
+
+  /* ---------- Music (Kazakh version only) ---------- */
+
+  function initMusic() {
+    var audio = $("#bg-music");
+    var btn = $("#music-toggle");
+    var opened = false;
+    var broken = false;
+    var resumeOnShow = false;
+
+    audio.volume = 0.6;
+
+    function sync() {
+      var playing = !audio.paused;
+      btn.classList.toggle("is-playing", playing);
+      btn.setAttribute("aria-pressed", String(playing));
+      btn.setAttribute("data-i18n-aria", playing ? "musicPause" : "musicPlay");
+      btn.setAttribute("aria-label", t(playing ? "musicPause" : "musicPlay"));
+    }
+
+    function play() {
+      var p = audio.play();
+      if (p && p.catch) p.catch(sync);
+    }
+
+    audio.addEventListener("play", sync);
+    audio.addEventListener("pause", sync);
+    audio.addEventListener("error", function () {
+      // No music file uploaded (or it failed to load): hide the button.
+      broken = true;
+      btn.hidden = true;
+    });
+
+    btn.addEventListener("click", function () {
+      if (audio.paused) play(); else audio.pause();
+    });
+
+    // Pause while the tab/app is in the background, resume when back.
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        resumeOnShow = !audio.paused;
+        audio.pause();
+      } else if (resumeOnShow && lang === "kk") {
+        play();
+      }
+    });
+
+    music = {
+      start: function () {
+        opened = true;
+        if (lang === "kk" && !broken) {
+          btn.hidden = false;
+          play();
+        }
+      },
+      setLang: function (next) {
+        if (next !== "kk") audio.pause();
+        btn.hidden = next !== "kk" || !opened || broken;
+      }
+    };
+    sync();
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -345,6 +411,7 @@
   /* ---------- Start ---------- */
 
   initLinks();
+  initMusic();
   initLang();
   initIntro();
   initReveal();

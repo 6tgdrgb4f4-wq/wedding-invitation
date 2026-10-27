@@ -563,3 +563,50 @@ html:not(.js) .intro { display: none; }
 .hero__date,
 .details__list dd,
 .footer__names { font-variant-numeric: lining-nums; }
+
+/* ---------- Music button ---------- */
+.music-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--red);
+  color: var(--gold-soft);
+  cursor: pointer;
+  box-shadow: 0 8px 20px -8px rgba(90, 21, 32, .6);
+  animation: fadeIn .4s ease;
+}
+.music-toggle svg { width: 24px; height: 24px; }
+.music-toggle:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
+
+/* paused: crossed-out note */
+.music-toggle::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--gold-soft);
+  transform: rotate(-45deg);
+}
+.music-toggle.is-playing::before { display: none; }
+
+/* playing: soft pulsing ring */
+.music-toggle.is-playing::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  animation: pulse 2s ease-out infinite;
+}
+@keyframes pulse {
+  from { transform: scale(1); opacity: .8; }
+  to { transform: scale(1.6); opacity: 0; }
+}

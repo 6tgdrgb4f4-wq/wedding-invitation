@@ -63,6 +63,17 @@
     <button type="button" data-lang="en" aria-pressed="false">ENG</button>
   </div>
 
+  <!-- Background music (Kazakh version only). Put the track at assets/music.mp3 -->
+  <audio id="bg-music" src="assets/music.mp3" loop preload="none"></audio>
+  <button type="button" class="music-toggle" id="music-toggle" hidden
+          aria-pressed="false" data-i18n-aria="musicPlay" aria-label="Әуенді қосу">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" fill="currentColor"/>
+      <circle cx="17" cy="16" r="3" fill="currentColor"/>
+    </svg>
+  </button>
+
   <!-- Opening "yurt doors" -->
   <div class="intro" id="intro">
     <div class="intro__door intro__door--left"></div>

@@ -79,6 +79,12 @@ The closing date is set in two places, and they must match:
 - `RSVP_DEADLINE` in [js/config.js](js/config.js)
 - `DEADLINE` in [apps-script/Code.gs](apps-script/Code.gs)
 
+## Music
+
+Put an MP3 at `assets/music.mp3` and push. It plays only in the Kazakh version. It starts when the guest taps "Шақыртуды ашу", because browsers block audio until the visitor taps something. A round button in the bottom-right corner pauses and resumes it. Switching to English stops the music. If there's no file, the button doesn't appear.
+
+Keep the file small, around 3–5 MB, so the page loads quickly on mobile data. A clip of 2–3 minutes at 128 kbps is enough, and it loops.
+
 ## Editing
 
 - **Texts**: edit [js/i18n.js](js/i18n.js). Each text has a Kazakh (`kk`) and an English (`en`) version.

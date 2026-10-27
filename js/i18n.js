@@ -4,6 +4,8 @@ window.I18N = {
   kk: {
     pageTitle: "Абылайхан & Наргиза — үйлену тойы",
     openInvite: "Шақыртуды ашу",
+    musicPlay: "Әуенді қосу",
+    musicPause: "Әуенді тоқтату",
     city: "Алматы",
     heroKicker: "Үйлену тойына шақыру",
     groom: "Абылайхан",
@@ -68,6 +70,8 @@ window.I18N = {
   en: {
     pageTitle: "Abylaikhan & Nargiza — Wedding",
     openInvite: "Open invitation",
+    musicPlay: "Play music",
+    musicPause: "Pause music",
     city: "Almaty",
     heroKicker: "Wedding Invitation",
     groom: "Abylaikhan",
