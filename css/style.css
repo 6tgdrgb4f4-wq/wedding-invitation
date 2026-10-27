@@ -287,6 +287,15 @@ section { margin-bottom: 36px; text-align: center; }
   font-size: 22px;
   font-weight: 600;
 }
+.details__list .details__note {
+  font-family: var(--sans);
+  font-weight: 400;
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.details__list .details__note:empty { display: none; }
 
 /* ---------- Buttons ---------- */
 .btn-row {

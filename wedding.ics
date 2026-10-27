@@ -6,14 +6,15 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:wedding-abylaikhan-nargiza-20261226@invitation
 DTSTAMP:20261027T000000Z
-DTSTART:20261226T123000Z
+DTSTART:20261226T120000Z
 DTEND:20261226T190000Z
 SUMMARY:Абылайхан & Наргиза — үйлену тойы
 LOCATION:Lumiere Hall\, Алматы
-DESCRIPTION:Абылайхан мен Наргизаның үйлену т
- ойы. Той иелері: Серік – Айнур.\nWedding of Abylai
- khan & Nargiza. Hosts: Serik & Ainur.\n\n2GIS: https://2gis.kz/almaty/geo/
- 70000001114788459/77.050412\,43.304933
+DESCRIPTION:Беташар – 17:00\, той – 18:00. Абылайхан
+  мен Наргизаның үйлену тойы. Той иелері: 
+ Серік – Айнур.\nBetashar – 5:00 PM\, wedding celebration –
+  6:00 PM. Wedding of Abylaikhan & Nargiza. Hosts: Serik & Ainur.\n\n2GIS: 
+ https://2gis.kz/almaty/geo/70000001114788459/77.050412\,43.304933
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Абылайхан & Наргиза — үйлену тойы

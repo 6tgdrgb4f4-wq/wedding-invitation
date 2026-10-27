@@ -18,7 +18,8 @@
   }
 
   function t(key) {
-    return (DICT[lang] && DICT[lang][key]) || DICT.kk[key] || key;
+    if (DICT[lang] && key in DICT[lang]) return DICT[lang][key];
+    return key in DICT.kk ? DICT.kk[key] : key;
   }
 
   /* ---------- Language ---------- */

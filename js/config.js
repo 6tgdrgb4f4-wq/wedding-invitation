@@ -3,8 +3,8 @@ window.WEDDING_CONFIG = {
   // Paste your Google Apps Script Web App URL here (ends with /exec).
   APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzxHfolt6cbgHft5n5iNtZaIQdaocIrxhH_Y4gMO9wtRnODcANi8biGL6m820_2YVIm/exec",
 
-  // 26 Dec 2026, 17:30 Almaty time (UTC+5) until midnight.
-  EVENT_START: "2026-12-26T17:30:00+05:00",
+  // 26 Dec 2026, Betashar at 17:00, wedding at 18:00 Almaty time (UTC+5), until midnight.
+  EVENT_START: "2026-12-26T17:00:00+05:00",
   EVENT_END: "2026-12-27T00:00:00+05:00",
 
   // RSVP form closes after this moment (keep in sync with apps-script/Code.gs).
