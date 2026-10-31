@@ -165,7 +165,22 @@ section { margin-bottom: 36px; text-align: center; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---------- Hero ---------- */
-.hero { padding: 44px 24px 36px; }
+.hero { padding: 28px 22px 36px; }
+
+/* Photo in an arched, yurt-door style gold frame */
+.hero__photo {
+  position: relative;
+  margin: 0 auto;
+  padding: 6px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50% 50% 18px 18px / 150px 150px 18px 18px;
+}
+.hero__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50% 50% 13px 13px / 144px 144px 13px 13px;
+}
 
 .corner {
   position: absolute;
@@ -179,9 +194,15 @@ section { margin-bottom: 36px; text-align: center; }
 .corner--br { bottom: 10px; right: 10px; transform: scale(-1, -1); }
 
 .hero__shanyrak {
-  width: 84px;
-  height: 84px;
+  position: relative;
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin: -38px auto 0;
+  padding: 6px;
   color: var(--gold);
+  background: var(--card);
+  border-radius: 50%;
 }
 
 .kicker {
@@ -228,6 +249,17 @@ section { margin-bottom: 36px; text-align: center; }
   margin: 0 0 12px;
 }
 .invite__text { margin: 0; font-size: 16px; }
+.invite__text > span { display: block; }
+.invite__names { margin: 10px 0; }
+.invite__names span {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--red);
+}
 
 /* ---------- Countdown ---------- */
 .countdown__grid {
